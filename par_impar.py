@@ -7,14 +7,15 @@ N = int(input("Quantos números você vai digitar: "))
 
 for i in range(N):
     x = int(input("Digite um número inteiro: "))
-    if x % 2 == 0:
-        print("PAR")
-    else:
-        print("IMPAR")
+    if x % 2 == 0 and x != 0:
+        print("PAR ",end="")
+    elif x % 2 != 0:
+        print("IMPAR ",end="")
+    
 
     if x < 0:
         print("NEGATIVO")
+    elif x > 0:
+        print("POSITIVO")
     elif x == 0:
         print("NULO")
-    else:
-        print("POSITIVO")
