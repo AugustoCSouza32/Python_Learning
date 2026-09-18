@@ -1,19 +1,20 @@
-# Faça um programa para ler dois vetores A e B, contendo N elementos cada.
-# Em seguida, gere um terceiro vetor C onde cada elemento de C é a soma dos
-# Elementos correspondentes de A e B. Imprima o vetor C gerado.
+# Faça um programa que leia N números reais e armazene-os em um vetor. Em seguida,
+# Mostrar na tela o maior número do vetor. Mostrar também a posição do maior elemento,
+# considerando a primeira posição como 0.
 
-n = int(input("Quantos valores vai ter cada vetor: "))
-
-a: list[int] = [0 for _ in range(n)]
-b: list[int] = [0 for _ in range(n)]
-c: list[int] = [0 for _ in range(n)]
-for i in range(n):
-    a[i] = int(input("A: "))
-    b[i] = int(input("B: "))
+n = int(input("Quantos números vai digitar? "))
+vet = [0 for _ in range(n)]
 
 for i in range(n):
-    c[i] = a[i] + b[i]
+    vet[i] = int(input("Digite um número: "))
 
-print("Vetor resultante: ")
-for i in c:
-    print(i)
+maior_valor = 0
+
+for i in range(len(vet)):
+    if vet[i] > maior_valor:
+        maior_valor = vet[i]
+        posicao= i
+
+print(f"Maior valor: {maior_valor}")
+print(f"Posição do maior valor: {posicao}")
+
